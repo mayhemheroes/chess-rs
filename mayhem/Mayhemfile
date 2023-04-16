@@ -1,0 +1,6 @@
+project: chess-rs
+target: chrs-lib-fuzz
+
+cmds:
+    - cmd: ./chrs-lib-fuzz
+      libfuzzer: true
