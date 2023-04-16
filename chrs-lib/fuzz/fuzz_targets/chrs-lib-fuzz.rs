@@ -14,6 +14,7 @@ fuzz_target!(|data: Vec<&str>| {
                     match Square::from_str(&chars.clone().skip(2).take(2).collect::<String>()) {
                         Ok(to) => {
                             let mut m = Move::infer(from, to, &config);
+                            config.make_move(m);
                         },
                         Err(_) => ()
                     }
